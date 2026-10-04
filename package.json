@@ -1,0 +1,47 @@
+{
+  "name": "@temrevil/t-sec",
+  "version": "1.0.0",
+  "description": "An age-encrypted secrets CLI with a terminal UI, per-device identities, and child-process environment injection.",
+  "type": "module",
+  "license": "MIT",
+  "author": "TemRevil",
+  "engines": {
+    "node": ">=22"
+  },
+  "bin": {
+    "t-sec": "dist/t-sec.mjs"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "SECURITY.md",
+    "docs"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TemRevil/t-sec.git"
+  },
+  "bugs": {
+    "url": "https://github.com/TemRevil/t-sec/issues"
+  },
+  "scripts": {
+    "build": "node build.mjs",
+    "typecheck": "tsc --noEmit",
+    "test": "node --test tests/*.test.mjs",
+    "check": "npm run typecheck && npm run build && npm test && npm run scan",
+    "scan": "node scripts/scan-public.mjs",
+    "prepack": "npm run build"
+  },
+  "dependencies": {
+    "commander": "^12.1.0",
+    "ink": "^5.0.1",
+    "react": "^18.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "@types/react": "^18.3.5",
+    "esbuild": "^0.23.1",
+    "typescript": "^5.5.4"
+  }
+}

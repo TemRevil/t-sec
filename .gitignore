@@ -1,0 +1,15 @@
+node_modules/
+dist/
+.test-data/
+.runtime/
+*.log
+.env
+.env.*
+!.env.example
+_secrets/
+recipients.txt
+identity.txt
+*.age
+*.pem
+*.key
+*.ppk
